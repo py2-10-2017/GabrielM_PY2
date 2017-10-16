@@ -20,4 +20,5 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^', include('apps.blogs.urls')),
     url(r'^', include('apps.time_display.urls')),
+    url(r'^random_Word', include('apps.random_Word.urls')),
 ]
