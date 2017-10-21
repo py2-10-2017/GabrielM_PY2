@@ -20,5 +20,10 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^', include('apps.blogs.urls')),
     url(r'^', include('apps.time_display.urls')),
-    url(r'^random_Word', include('apps.random_Word.urls')),
+    url(r'^random_Word$', include('apps.random_Word.urls')),
+    url(r'^survey_form$', include('apps.survey_form.urls')),
+    url(r'survey_form/process$', include('apps.survey_form.urls'))
+
+    
+
 ]

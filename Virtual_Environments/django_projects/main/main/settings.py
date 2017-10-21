@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'apps.blogs',
     'apps.time_display',
     'apps.random_Word',
+    'apps.survey_form',
     
 ]
 
