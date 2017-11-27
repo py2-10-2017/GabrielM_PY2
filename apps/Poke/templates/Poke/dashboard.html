@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pokes dashboard</title>
+</head>
+    <h2>Welcome  {{ request.User.name }}, </h2>
+    <!-- insert number of pokes here -->
+
+    <!-- insert history of pokes here -->
+
+    <a href="/">Logout</a>
+<div>
+    <p>People you may want to poke:</p>
+        <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Alias</th>
+                        <th>Email Address</th>
+                        <th>Poke History</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                        
+                            {% for User in Users %}
+                            <tr>
+                            <td> {{User.name}} </td>
+                            <td> {{User.alias}}</td>
+                            <td> {{User.email}}</td>
+                            <td><a href="#"><button type="">Poke!</button></a></td>
+                            </tr>
+                            {% endfor %}
+                </tbody>
+            </table>
+</div>
+
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {% load static %}
+        <link href="{% static 'css/signin.css' %}" rel="stylesheet">
+    </head>
+    <body>
+        <h2>Welcome, please register or login</h2>
+        <div class="container">
+        <form class="form-signin" action='/create' method="POST">   
+        {% csrf_token %}
+            <p><label for="name" class="sr-only">Name: </label><input type="text" name="name"></p>    
+            <p><label for="alias" class="sr-only">Alias: </label><input type="text" name="alias"></p>    
+            <p><label for="email" class="sr-only">Email: </label><input type="text" name="email" required></p>    
+            <p><label for="password" class="sr-only">Password: </label><input type="password" name="password" required></p> 
+            <h6>*Password should be atleast 8 characters</h6>  
+            <p><label for="confirm" class="sr-only">Confirm PW: </label><input type="password" name="confirm"></p>  
+            <p><label for="dob" class="sr-only"> Date of Birth </label><input type="date" name="dob"></p>
+
+            <input type="submit" value="Register" class="btn btn-lg btn-primary btn-block">
+        </form>
+    </div>
+    <hr>
+        <form action="/pokes" method="Post">
+        {% csrf_token %}
+        <p><label for="loginE" class="sr-only">Email: </label><input type="text" name="loginE"></p>
+        <p><label for="loginP" class="sr-only">Password: </label><input type="password" name="loginP"></p>   
+        <input type="submit" value="Login" class="btn btn-lg btn-primary btn-block">
+               
+        </form>
+    </body>
+</html>
